@@ -1,0 +1,59 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        applicationId versions.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility versions.java
+        targetCompatibility versions.java
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.all {
+            it.ignoreFailures true
+            it.maxHeapSize "1024m"
+
+            testLogging {
+                outputs.upToDateWhen { false }
+                showStandardStreams true
+                showExceptions true
+                showStackTraces true
+                showCauses true
+                exceptionFormat TestExceptionFormat.FULL
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:' + versions.appcompat
+    implementation 'androidx.constraintlayout:constraintlayout:' + versions.constraintLayout
+    implementation 'com.google.android.material:material:' + versions.material
+    implementation 'com.google.guava:guava:' + versions.guava
+    testImplementation 'junit:junit:' + versions.junit
+    testImplementation 'org.apache.commons:commons-text:1.8'
+}

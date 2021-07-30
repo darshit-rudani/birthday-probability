@@ -1,0 +1,48 @@
+buildscript {
+    ext {
+        versions = [
+                "applicationId"     : "mooc.vandy.java4android.${(project.name).replace('-', '_')}",
+                "junit"             : "4.13",
+                "appcompat"         : "1.1.0",
+                "material"          : "1.1.0",
+                "constraintLayout"  : "1.1.3",
+                "commonsLang3"      : "3.10",
+                "fluent"            : "1.3.0",
+                "guava"             : "29.0-android",
+                "commonsIo"         : "20030203.000550",
+                "commonsText"       : "1.8",
+                "commonsCollections": "3.2.2",
+                "compileSdk"        : 30,
+                "minSdk"            : 22,
+                "targetSdk"         : 30,
+                "versionCode"       : 1,
+                "versionName"       : "1.0",
+                "java"              : JavaVersion.VERSION_1_8
+        ]
+    }
+
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.bmuschko:gradle-docker-plugin:6.4.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+if (file("$projectDir/gradle/tools.gradle").isFile()) {
+    apply from: "$projectDir/gradle/tools.gradle"
+}

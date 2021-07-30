@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-runtime:2.1.0@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../m4-diamonds/caches/transforms-2/files-2.1/ad6526998a4ba13f1c82a470d6339f27/lifecycle-runtime-2.1.0/res" />
+      <root url="file://$PROJECT_DIR$/caches/transforms-2/files-2.1/ad6526998a4ba13f1c82a470d6339f27/lifecycle-runtime-2.1.0/res" />
+      <root url="file://$PROJECT_DIR$/../m8-calculator/caches/transforms-2/files-2.1/ad6526998a4ba13f1c82a470d6339f27/lifecycle-runtime-2.1.0/res" />
+      <root url="file://$PROJECT_DIR$/../m8-calculator/caches/transforms-2/files-2.1/ad6526998a4ba13f1c82a470d6339f27/lifecycle-runtime-2.1.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../m8-calculator/caches/transforms-2/files-2.1/ad6526998a4ba13f1c82a470d6339f27/lifecycle-runtime-2.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../m8-calculator/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime/2.1.0/533a0cd1a095abbdfd08a49c4d34bd0713977034/lifecycle-runtime-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
